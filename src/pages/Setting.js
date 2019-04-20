@@ -4,7 +4,7 @@ import {
     Text
 } from 'react-native';
 
-class Chat extends PureComponent {
+class Setting extends PureComponent {
     render() {
         return (
             <Text style={styles.welcome}></Text>
@@ -20,4 +20,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default Chat;
+export default Setting;

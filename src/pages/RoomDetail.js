@@ -10,7 +10,7 @@ import {
 class RoomDetail extends PureComponent {
     render() {
         return (
-            <View>
+            <View style={styles.roomDetailWrap}>
                 <TouchableOpacity onPress={() => Actions.push('setting')}>
                     <Text style={styles.welcome}>设置</Text>
                 </TouchableOpacity>
@@ -20,6 +20,10 @@ class RoomDetail extends PureComponent {
 }
 
 const styles = StyleSheet.create({
+    roomDetailWrap: {
+        flex: 1,
+        backgroundColor: '#efeff4'
+    },
     welcome: {
         fontSize: 20,
         textAlign: 'center',

@@ -7,5 +7,7 @@ brew install watchman
 
 npm install -g yarn react-native-cli
 
+yarn
+
 react-native run-ios
 ```

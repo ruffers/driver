@@ -64,9 +64,9 @@ const styles = StyleSheet.create({
         color: '#fff'
     },
     more: {
-        width: 25,
-        height: 10,
-        right: 10
+        width: px2dp(44),
+        height: px2dp(40),
+        right: px2dp(28)
     }
 });
 

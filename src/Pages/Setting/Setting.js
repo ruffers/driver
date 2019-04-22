@@ -3,21 +3,14 @@ import {
     StyleSheet,
     Text
 } from 'react-native';
+import SettingStyle from './SettingStyle';
 
 class Setting extends PureComponent {
     render() {
         return (
-            <Text style={styles.welcome}></Text>
+            <Text style={SettingStyle.welcome}></Text>
         );
     }
 }
-
-const styles = StyleSheet.create({
-    welcome: {
-        fontSize: 20,
-        textAlign: 'center',
-        margin: 10,
-    }
-});
 
 export default Setting;

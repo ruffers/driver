@@ -1,16 +1,15 @@
 import React, { PureComponent } from 'react';
 import { Platform, StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import { Scene, Router, Actions, Reducer, ActionConst, Overlay, Tabs, Modal, Drawer, Stack, Lightbox } from 'react-native-router-flux';
-import Chat from './Pages/Chat';
-import Setting from './Pages/Setting';
-import RoomDetail from './Pages/RoomDetail';
-import Login from './Pages/Login';
-import { moreIcon } from './constants/Images';
+import Chat from './Pages/Chat/Chat';
+import Setting from './Pages/Setting/Setting';
+import RoomDetail from './Pages/RoomDetail/RoomDetail';
+import Login from './Pages/Login/Login';
 
 const MoreButton = () => {
     return (
         <TouchableOpacity onPress={() => Actions.push('carInfo')}>
-            <Image style={styles.more} source={moreIcon}/>
+            <Image style={stylesNavigation.more} source={Images.moreIcon}/>
         </TouchableOpacity>
     );
 }
@@ -27,32 +26,32 @@ const Navigation = () => (
                 key="chat"
                 component={Chat}
                 title="AE86"
-                titleStyle={styles.title}
-                navigationBarStyle={styles.navBar}
+                titleStyle={stylesNavigation.title}
+                navigationBarStyle={stylesNavigation.navBar}
                 renderRightButton={MoreButton}/>
             <Scene
                 key="carInfo"
                 component={RoomDetail}
-                backButtonTextStyle={styles.backButtonTextStyle}
+                backButtonTextStyle={stylesNavigation.backButtonTextStyle}
                 backButtonTintColor="#fff"
                 title="车辆信息"
-                titleStyle={styles.title}
-                navigationBarStyle={styles.navBar}
+                titleStyle={stylesNavigation.title}
+                navigationBarStyle={stylesNavigation.navBar}
                 backTitle="返回"/>
             <Scene
                 key="setting"
                 component={Setting}
-                backButtonTextStyle={styles.backButtonTextStyle}
+                backButtonTextStyle={stylesNavigation.backButtonTextStyle}
                 backButtonTintColor="#fff"
                 title="设置"
-                titleStyle={styles.title}
-                navigationBarStyle={styles.navBar}
+                titleStyle={stylesNavigation.title}
+                navigationBarStyle={stylesNavigation.navBar}
                 backTitle="车辆信息"/>
         </Stack>
     </Router>
 );
 
-const styles = StyleSheet.create({
+const stylesNavigation = StyleSheet.create({
     navBar: {
         backgroundColor: '#323135'
     },

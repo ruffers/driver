@@ -6,29 +6,18 @@ import {
     View,
     TouchableOpacity
 } from 'react-native';
+import RoomDetailStyle from './RoomDetailStyle';
 
 class RoomDetail extends PureComponent {
     render() {
         return (
-            <View style={styles.roomDetailWrap}>
+            <View style={RoomDetailStyle.roomDetailWrap}>
                 <TouchableOpacity onPress={() => Actions.push('setting')}>
-                    <Text style={styles.welcome}>设置</Text>
+                    <Text style={RoomDetailStyle.welcome}>设置</Text>
                 </TouchableOpacity>
             </View>
         );
     }
-}
-
-const styles = StyleSheet.create({
-    roomDetailWrap: {
-        flex: 1,
-        backgroundColor: '#efeff4'
-    },
-    welcome: {
-        fontSize: 20,
-        textAlign: 'center',
-        margin: 10,
-    }
-});
+};
 
 export default RoomDetail;

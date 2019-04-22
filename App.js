@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
-import Navigation from './src/Navigation';
 import './src/Utils/Global';
+import Navigation from './src/Navigation';
 
 class App extends PureComponent {
     render() {

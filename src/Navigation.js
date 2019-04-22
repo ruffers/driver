@@ -5,13 +5,12 @@ import Chat from './Pages/Chat';
 import Setting from './Pages/Setting';
 import RoomDetail from './Pages/RoomDetail';
 import Login from './Pages/Login';
-
-const rightButtonImage = require('./Images/more.png');
+import { moreIcon } from './constants/Images';
 
 const MoreButton = () => {
     return (
         <TouchableOpacity onPress={() => Actions.push('carInfo')}>
-            <Image style={styles.more} source={rightButtonImage}/>
+            <Image style={styles.more} source={moreIcon}/>
         </TouchableOpacity>
     );
 }

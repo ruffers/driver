@@ -29,11 +29,9 @@ class Login extends PureComponent {
                                 </View>
                             </View>
                             <View style={LoginStyle.loginBtnWrap}>
-                                <View style={LoginStyle.loginBtn}>
-                                    <TouchableOpacity onPress={this.login}>
-                                        <Text style={LoginStyle.loginBtnTxt}>登录</Text>
-                                    </TouchableOpacity>
-                                </View>
+                                <TouchableOpacity activeOpacity={0.8} style={LoginStyle.loginBtn} onPress={this.login}>
+                                    <Text style={LoginStyle.loginBtnTxt}>登录</Text>
+                                </TouchableOpacity>
                             </View>
                         </View>
                     </View>

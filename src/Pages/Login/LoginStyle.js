@@ -1,4 +1,5 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
+let { width } = Dimensions.get('window');
 
 export default StyleSheet.create({
     loginWrap: {
@@ -6,9 +7,11 @@ export default StyleSheet.create({
         backgroundColor: '#f3f3f3'
     },
     loginSlider: {
-        flex: 1
+        flex: 1,
+        flexDirection: 'row',
+        width: width * 2
     },
-    loginItem: {
+    pageItem: {
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center'
@@ -26,7 +29,7 @@ export default StyleSheet.create({
         color: '#000'
     },
     inputs: {
-        marginBottom: px2dp(220)
+
     },
     inputItem: {
         borderBottomWidth: px2dp(1),
@@ -58,5 +61,27 @@ export default StyleSheet.create({
     loginBtnTxt: {
         fontSize: px2dp(35),
         color: '#fff'
+    },
+    registerEntry: {
+        marginBottom: px2dp(220),
+        marginTop: px2dp(30),
+        flexDirection: 'row',
+        justifyContent: 'flex-end'
+    },
+    registerTxt: {
+        fontSize: px2dp(32),
+        color: '#5b6a92'
+    },
+    returnBtn: {
+        position: 'absolute',
+        width: px2dp(50),
+        height: px2dp(50),
+        left: px2dp(40),
+        top: px2dp(120)
+    },
+    return: {
+        width: px2dp(50),
+        height: px2dp(50),
+        resizeMode: 'contain'
     }
 });
